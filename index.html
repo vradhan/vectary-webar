@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Grape Festival 2019 - mapa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">    
+    <script type="text/javascript" src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js"></script>
+    <script type="module" src="https://www.vectary.com/viewer/v1/scripts/vctr-viewer.js"></script>
+    <script type="module" src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="shortcut icon" href="https://grapefestival.sk/images/favicon-2019.png?v=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://grapefestival.sk/images/logo.png">
+    <link rel="icon" type="image/png" href="https://grapefestival.sk/images/favicon-2019.png?v=1" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://grapefestival.sk/images/favicon-2019.png?v=1" sizes="16x16">
+  </head>
+
+  <body>
+    <div id="app">
+      
+      <button id="menu-toggle" class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      
+      <div id="viewer">
+        <vctr-viewer
+          id="g19"
+          model="f7a9a490-8809-4510-a0d6-9dc0273d8271" 
+          env="studio1"
+          showPreloader="1" 
+          gestureHandling="superior" 
+          showGesturePrompts="0" 
+          panX="1" 
+          panY="1" 
+          zoomIn="50" 
+          zoomOut="1000" 
+          rotateY="1" 
+          turntable="0"
+          canvasHeight="100pct" 
+          canvasHeight="100pct" 
+          minPolar="0" 
+          maxPolar="87" 
+          enableApi="1" 
+        >
+        </vctr-viewer>
+
+        <a class="watermark" href="https://www.vectary.com/3d-modeling-news/the-vectary-viewer-now-supports-ar-on-both-iphones-and-androids?utm_source=Grape%20web&utm_medium=Grape&utm_campaign=Viewer" target="_blank">
+          <img src="files/watermark.svg" title="Vectary &#x2764; Grape" />
+        </a>
+      </div>
+      
+      <div id="menu">
+        <div class="inner">
+          <ul class="items" id="items1">
+          </ul>
+          <ul class="items" id="items2">
+          </ul>
+          <ul class="items icons" id="items3">
+            <li><a href="#" id="nabijackaren" data-highlight="nabijackaren_3,nabijackaren_6"><div class="icon nabijackaren"><img src="files/nabijackaren.svg" /></div></a></li>
+            <li><a href="#" id="cigarety" data-highlight="cigarety_3,cigarety_6"><div class="icon cigarety"><img src="files/cigarety.svg" /></div></a></li>
+            <li><a href="#" id="kava" data-highlight="kava_3,kava_6,kava_8,kava_9"><div class="icon kava"><img src="files/kava.svg" /></div></a></li>
+            <li><a href="#" id="redbull" data-highlight="red_bull_tent"><div class="icon redbull"><img src="files/redbull.svg" /></div></a></li>
+            <li><a href="#" id="bankomat" data-highlight="bankomat_3,bankomat_6"><div class="icon bankomat"><img src="files/bankomat.svg" /></div></a></li>
+            <li><a href="#" id="vinaren" data-highlight="vinaren_3,vinaren_5"><div class="icon vinaren"><img src="files/vinaren.svg" /></div></a></li>
+            <li><a href="#" id="vino" data-highlight="vino_3,vino_5"><div class="icon vino"><img src="files/vino.svg" /></div></a></li>
+            <li><a href="#" id="pivo" data-highlight="pivo_3,pivo_6,pivo_9,pivo_12,pivo_15,pivo_18"><div class="icon pivo"><img src="files/pivo.svg" /></div></a></li>
+            <li><a href="#" id="bar" data-highlight="bar_3,bar_6,bar_9,bar_12,bar_15,bar_18"><div class="icon bar"><img src="files/bar.svg" /></div></a></li>
+            <li><a href="#" id="keramickewc" data-highlight="keramickewc_3,keramickewc_6"><div class="icon keramickewc"><img src="files/keramickewc.svg" /></div></a></li>
+            <li><a href="#" id="sprcha" data-highlight="sprcha_3"><div class="icon sprcha"><img src="files/sprcha.svg" /></div></a></li>
+            <li><a href="#" id="wc" data-highlight="wc_3,wc_6,wc_9,wc_12,wc_15,wc_18"><div class="icon wc"><img src="files/wc.svg" /></div></a></li>
+            <li><a href="#" id="voda" data-highlight="voda_2,voda_4,voda_6,voda_8,voda_10,voda_12,voda_14,voda_16,voda_18,voda_20,voda_22,voda_24"><div class="icon voda"><img src="files/voda.svg" /></div></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

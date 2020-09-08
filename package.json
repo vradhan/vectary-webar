@@ -1,0 +1,19 @@
+{
+  "name": "vctr-viewer",
+  "version": "1.0.0",
+  "description": "Vectary viewer",
+  "main": "viewer.js",
+  "scripts": {
+    "lint": "eslint scripts/**/*",
+    "serve": "http-server . -c-1 -p 2223",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

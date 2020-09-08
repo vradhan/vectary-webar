@@ -1,0 +1,239 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+// Mixins
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@font-face {font-family: 'Adieu-Black';src: url('https://www.grapefestival.sk/fonts/Adieu-Black.eot');src: url('https://www.grapefestival.sk/fonts/Adieu-Black.eot?#iefix') format('embedded-opentype'),url('https://www.grapefestival.sk/fonts/Adieu-Black.woff2') format('woff2'),url('https://www.grapefestival.sk/fonts/Adieu-Black.woff') format('woff');}
+@font-face {font-family: 'NeurialGrotesk-Regular';src: url('https://www.grapefestival.sk/fonts/37CB68_0_0.eot');src: url('https://www.grapefestival.sk/fonts/37CB68_0_0.eot?#iefix') format('embedded-opentype'),url('https://www.grapefestival.sk/fonts/37CB68_0_0.woff2') format('woff2'),url('https://www.grapefestival.sk/fonts/37CB68_0_0.woff') format('woff'),url('https://www.grapefestival.sk/fonts/37CB68_0_0.ttf') format('truetype');}
+
+
+
+$gray: #343a40;
+$pink: #fc3f5d;
+$white: #FFFFFF;
+
+html, body {
+  margin:0;
+  padding:0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {  
+  color: $pink;
+  font-family: "NeurialGrotesk-Regular", Helvetica, Arial;  
+	font-size: 16px;
+}
+
+a {
+  color:$pink;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Adieu-Black", Helvetica, Arial;  
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+#app {
+  min-width: 320px;
+  min-height: 100px;
+  height: 100%;
+  width:100%;  
+  position: relative;
+  
+  #menu-toggle {
+    position:fixed;
+    right:8px;
+    bottom:20px;
+    padding:0px;
+    z-index: 12;
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  #viewer {
+    position: absolute;
+    width:100%;
+    height:100%;  
+    
+    .watermark {
+      position:absolute;
+      left:7px;
+      bottom:10px;
+      z-index: 10;      
+    }
+  }
+  
+  #menu {
+    display:none; 
+    
+    &.open {
+      display:block !important;
+    }
+    &.closed {
+      display:none !important;
+    }
+    .inner {
+        height:calc(100% - 75px);        
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar-track {        
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar {
+            width: 7px;
+            background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;        
+            background-color: #4f4f4f;
+        }
+    }
+
+    background-color: rgba(255, 255, 255, 1);    
+    position: absolute;
+    z-index:10;
+    right:0;    
+    height:100%;
+    max-width:475px;        
+
+    ul {
+      margin:0;
+      padding: 20px;
+      @include clearfix;
+
+      li {
+        list-style:none;        
+        padding: 0;
+        margin: 0 0 10px 0;
+        float:left;
+        width:50%;
+      }
+
+      &.icons {        
+        padding:0 10px 10px 10px;
+        li {
+          text-align: center;
+          width:33%;
+          margin:0;
+          .icon {            
+            height:70px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            img {
+              justify-content: center;
+              align-self: flex-end;              
+            }
+            &.nabijackaren img {
+              height:40px;
+            }
+            &.cigarety img {
+              height:55px;
+            }
+            &.kava img {
+              height:30px;
+            }
+            &.redbull img {
+              height:40px;
+            }
+            &.bankomat img {
+              height:30px;
+            }
+            &.vinaren img {
+              height:40px;
+            }
+            &.vino img {
+              height:60px;
+            }
+            &.pivo img {              
+              height:50px;
+            }
+            &.bar img {
+              height:40px;
+            }
+            &.keramickewc img {
+              height:40px;
+            }
+            &.sprcha img {
+              height:50px;
+            }
+            &.wc img {
+              height:30px;
+            }
+            &.voda img {
+              height:30px;
+            }
+                        
+          }
+        }
+
+      }
+          
+    }
+
+  }
+
+}
+
+@import "./_sass/hamburgers/hamburgers";
+.hamburger-box {
+  width: 30px;
+}
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after {  
+  background-color: transparent;
+}
+
+.hamburger.is-active .hamburger-inner .text { 
+  visibility: hidden; 
+  opacity: 0;
+  transition: visibility 0s, opacity 0s;
+}
+
+.hamburger .hamburger-inner .text { 
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.2s 0.2s linear;
+  text-align:right;
+  margin-left:-30px;
+}
+
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner::before, 
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #4f4f4f;
+}
+

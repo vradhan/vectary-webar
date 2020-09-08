@@ -1,0 +1,377 @@
+@font-face {
+  font-family: 'Adieu-Black';
+  src: url("https://www.grapefestival.sk/fonts/Adieu-Black.eot");
+  src: url("https://www.grapefestival.sk/fonts/Adieu-Black.eot?#iefix") format("embedded-opentype"), url("https://www.grapefestival.sk/fonts/Adieu-Black.woff2") format("woff2"), url("https://www.grapefestival.sk/fonts/Adieu-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'NeurialGrotesk-Regular';
+  src: url("https://www.grapefestival.sk/fonts/37CB68_0_0.eot");
+  src: url("https://www.grapefestival.sk/fonts/37CB68_0_0.eot?#iefix") format("embedded-opentype"), url("https://www.grapefestival.sk/fonts/37CB68_0_0.woff2") format("woff2"), url("https://www.grapefestival.sk/fonts/37CB68_0_0.woff") format("woff"), url("https://www.grapefestival.sk/fonts/37CB68_0_0.ttf") format("truetype");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #fc3f5d;
+  font-family: "NeurialGrotesk-Regular", Helvetica, Arial;
+  font-size: 16px;
+}
+
+a {
+  color: #fc3f5d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Adieu-Black", Helvetica, Arial;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+#app {
+  min-width: 320px;
+  min-height: 100px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#app #menu-toggle {
+  position: fixed;
+  right: 8px;
+  bottom: 20px;
+  padding: 0px;
+  z-index: 12;
+}
+
+#app #menu-toggle:focus {
+  outline: 0;
+}
+
+#app #viewer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#app #viewer .watermark {
+  position: absolute;
+  left: 7px;
+  bottom: 10px;
+  z-index: 10;
+}
+
+#app #menu {
+  display: none;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  height: 100%;
+  max-width: 475px;
+}
+
+#app #menu.open {
+  display: block !important;
+}
+
+#app #menu.closed {
+  display: none !important;
+}
+
+#app #menu .inner {
+  height: calc(100% - 75px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#app #menu .inner::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#app #menu .inner::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+#app #menu .inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4f4f4f;
+}
+
+#app #menu ul {
+  margin: 0;
+  padding: 20px;
+}
+
+#app #menu ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#app #menu ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  float: left;
+  width: 50%;
+}
+
+#app #menu ul.icons {
+  padding: 0 10px 10px 10px;
+}
+
+#app #menu ul.icons li {
+  text-align: center;
+  width: 33%;
+  margin: 0;
+}
+
+#app #menu ul.icons li .icon {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+#app #menu ul.icons li .icon img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#app #menu ul.icons li .icon.nabijackaren img {
+  height: 40px;
+}
+
+#app #menu ul.icons li .icon.cigarety img {
+  height: 55px;
+}
+
+#app #menu ul.icons li .icon.kava img {
+  height: 30px;
+}
+
+#app #menu ul.icons li .icon.redbull img {
+  height: 40px;
+}
+
+#app #menu ul.icons li .icon.bankomat img {
+  height: 30px;
+}
+
+#app #menu ul.icons li .icon.vinaren img {
+  height: 40px;
+}
+
+#app #menu ul.icons li .icon.vino img {
+  height: 60px;
+}
+
+#app #menu ul.icons li .icon.pivo img {
+  height: 50px;
+}
+
+#app #menu ul.icons li .icon.bar img {
+  height: 40px;
+}
+
+#app #menu ul.icons li .icon.keramickewc img {
+  height: 40px;
+}
+
+#app #menu ul.icons li .icon.sprcha img {
+  height: 50px;
+}
+
+#app #menu ul.icons li .icon.wc img {
+  height: 30px;
+}
+
+#app #menu ul.icons li .icon.voda img {
+  height: 30px;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Spin
+   */
+.hamburger--spin .hamburger-inner {
+  -webkit-transition-duration: 0.22s;
+          transition-duration: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger-box {
+  width: 30px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: transparent;
+}
+
+.hamburger.is-active .hamburger-inner .text {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0s;
+  transition: visibility 0s, opacity 0s;
+}
+
+.hamburger .hamburger-inner .text {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s, opacity 0.2s 0.2s linear;
+  transition: visibility 0s, opacity 0.2s 0.2s linear;
+  text-align: right;
+  margin-left: -30px;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #4f4f4f;
+}
+/*# sourceMappingURL=main.css.map */
