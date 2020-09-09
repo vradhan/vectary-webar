@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(__dirname + "/"));
 
 app.get("/grape", function(req, res) {
-  res.sendFile(path.join(__dirname + "index.html"));
+  res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 app.get("/rocket", function(req, res) {
