@@ -7,8 +7,12 @@ const app = express();
 // Serve only the static files form the pages directory
 app.use(express.static(__dirname + "/"));
 
-app.get("/*", function (req, res) {
+app.get("/grape", function(req, res) {
   res.sendFile(path.join(__dirname + "index.html"));
 });
 
-app.listen(process.env.PORT||8888);
+app.get("/rocket", function(req, res) {
+  res.sendFile(path.join(__dirname + "/pages/index-2.html"));
+});
+
+app.listen(process.env.PORT || 3000);

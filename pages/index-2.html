@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.vectary.com/viewer/v1/scripts/vctr-viewer.js"
+    ></script>
+    <script type="module" src="scripts/index-2.js"></script>
+    <link rel="stylesheet" href="styles/main-2.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <button id="menu-toggle" class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <div id="viewer">
+        <vctr-viewer
+          id="test"
+          model="d6c1f27d-6a27-4c7e-bd7d-bd19d7faa56c"
+          turntable="0"
+          gesturehandling="superior"
+          showinteractionprompt="0"
+          enableapi="1"
+        >
+        </vctr-viewer>
+
+        <a
+          class="watermark"
+          href="https://www.vectary.com/3d-modeling-news/the-vectary-viewer-now-supports-ar-on-both-iphones-and-androids?utm_source=Grape%20web&utm_medium=Grape&utm_campaign=Viewer"
+          target="_blank"
+        >
+          <img src="files/watermark.svg" title="Vectary &#x2764; Grape" />
+        </a>
+      </div>  
+    </div>
+  </body>
+</html>
